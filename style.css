@@ -326,8 +326,7 @@ footer .credit a {
 .music-toggle {
   position: fixed;
   top: 15px;
-  left: 75%;
-  transform: translateX(-75%);
+  left: 52%;
   z-index: 9999;
   padding: 2px 8px;
   border: none;
