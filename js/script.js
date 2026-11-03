@@ -13,3 +13,33 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
+
+const bgMusic = document.getElementById("bgMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+bgMusic.volume = 0.5;
+
+window.addEventListener("load", () => {
+  bgMusic
+    .play()
+    .then(() => {
+      musicToggle.textContent = "♫ Matikan Musik";
+    })
+    .catch(() => {
+      musicToggle.textContent = "♫ Putar Musik";
+    });
+});
+
+musicToggle.addEventListener("click", async () => {
+  if (bgMusic.paused) {
+    try {
+      await bgMusic.play();
+      musicToggle.textContent = "♫ Matikan Musik";
+    } catch (error) {
+      musicToggle.textContent = "♫ Putar Musik";
+    }
+  } else {
+    bgMusic.pause();
+    musicToggle.textContent = "♫ Putar Musik";
+  }
+});
