@@ -329,7 +329,7 @@ footer .credit a {
   left: 75%;
   transform: translateX(-75%);
   z-index: 9999;
-  padding: 3px 8px;
+  padding: 1px 8px;
   border: none;
   border-radius: 20px;
   background: var(--primary);
